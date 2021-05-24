@@ -1,0 +1,74 @@
+{
+    "name": "Jane Flinstone",
+    "image": "images/id.png",
+    "handle": "@flintstone",
+    "company": "UWS MoodleNet",
+    "city": "Perth",
+    "website": "flinstone.com",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "resources": [
+        {
+            "name": "The Physics of Boomerangs",
+            "type": "Video",
+            "tags": [ "Boomerang Throwing", "Boomerang Physics" ],
+            "thumbnail": "images/group.jpeg"
+        },
+        {
+            "name": "Fast Boomerangs",
+            "type": "Web Page",
+            "tags": [ "Boomerang Throwing" ],
+            "thumbnail": "images/group.jpeg"
+        },
+        {
+            "name": "Crazy Boomerangs",
+            "type": "Moodle Book",
+            "tags": [ "Boomerang Throwing", "Boomerang Crafting" ],
+            "thumbnail": "images/group.jpeg"
+        },
+        {
+            "name": "Boomerang Quick Test",
+            "type": "H5P",
+            "tags": [ "Boomerang Throwing", "Boomerang Crafting" ],
+            "thumbnail": "images/group.jpeg"
+        }
+    ],
+    "collections": [
+        "Boomerang Physics",
+        "Boomerang for Kids",
+        "Boomerang Crafting Techniques"
+    ],
+    "following": [
+        {
+            "label": "#Hydrology",
+            "type": "primary"
+        },
+        {
+            "label": "Biochemistry",
+            "type": "primary"
+        },
+        {
+            "label": "Horticulture",
+            "type": "secondary"
+        },
+        {
+            "label": "Artificial Intelligence Toys",
+            "type": "secondary"
+        },
+        {
+            "label": "Education",
+            "type": "primary"
+        },
+        {
+            "label": "#Fun Science",
+            "type": "primary"
+        },
+        {
+            "label": "Pop Culture Science",
+            "type": "secondary"
+        },
+        {
+            "label": "Neuroscience",
+            "type": "secondary"
+        }
+    ]
+}
