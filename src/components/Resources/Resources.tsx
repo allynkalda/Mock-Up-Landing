@@ -27,7 +27,7 @@ const Resources: FunctionComponent<any> = () => {
                                 [classes.h5p]: item.type === 'H5P'
                             })}>{item.type}</Typography>
                         <Typography component="p" variant="h5" align="left" className={classes.title}>{item.name}</Typography>
-                        {item.tags.map((item) => {
+                        {item.tags.map((item: string) => {
                             return <Chip label={item} noMargin type="secondary" className={classes.chip} />
                         })}
                     </div>

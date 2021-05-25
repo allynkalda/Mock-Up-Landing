@@ -4,17 +4,17 @@ import { Card, Points, InfoBar, Collections, Profile, Resources } from 'componen
 
 import useStyles from './Landing.styles';
 
-const Landing: FunctionComponent<any> = ({ media, content, actions }) => {
+const Landing: FunctionComponent<any> = () => {
 
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.root} alignContent="center" justify="center" spacing={3}>
-        <Grid item xs={6}>
+    <Grid container className={classes.root} alignContent="center" justify="center">
+        <Grid item xs={10} sm={6} className={classes.grid}>
             <Profile />
             <Resources />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={10} sm={4} className={classes.grid}>
             <Card content={<Points />} />
             <Card content={<InfoBar />} />
             <Card content={<Collections />} />

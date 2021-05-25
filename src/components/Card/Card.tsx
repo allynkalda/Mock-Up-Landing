@@ -1,10 +1,23 @@
 import { FunctionComponent } from 'react';
 import { Card as MuiCard, CardMedia, CardContent, CardActions } from '@material-ui/core';
-import clsx from 'clsx';
 
 import useStyles from './Card.styles';
 
-const Card: FunctionComponent<any> = ({ media, content, actions }) => {
+interface Media {
+  component?: any,
+  alt?: string,
+  height?: string,
+  src?: string,
+  title?: string
+}
+
+interface CardProps {
+  media?: Media,
+  content: JSX.Element,
+  actions?: JSX.Element
+}
+
+const Card: FunctionComponent<CardProps> = ({ media, content, actions }) => {
 
   const classes = useStyles();
 

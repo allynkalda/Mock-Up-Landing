@@ -5,7 +5,7 @@ import data from '../../data/data.json';
 
 import useStyles from './Collections.styles';
 
-const Collections: FunctionComponent<any> = ({ media, content, actions }) => {
+const Collections: FunctionComponent<any> = () => {
 
   const classes = useStyles();
 

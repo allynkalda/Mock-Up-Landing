@@ -70,5 +70,10 @@
             "label": "Neuroscience",
             "type": "secondary"
         }
+    ],
+    "curating": [
+        "Horticulture",
+        "Artificial Intelligence Toys",
+        "Pop Culture Science"
     ]
 }

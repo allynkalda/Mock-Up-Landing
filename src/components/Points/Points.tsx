@@ -3,7 +3,7 @@ import { Grid, Divider, Typography } from '@material-ui/core';
 
 import useStyles from './Points.styles';
 
-const Points: FunctionComponent<any> = ({ media, content, actions }) => {
+const Points: FunctionComponent<any> = () => {
 
   const classes = useStyles();
 

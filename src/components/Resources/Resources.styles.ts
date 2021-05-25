@@ -9,7 +9,10 @@ export default makeStyles((theme) => ({
     borderRadius: '12px'
   },
   cardInfo: {
-    display: 'flex'
+    display: 'flex',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column'
+    },
   },
   text: {
     marginLeft: '20px',

@@ -8,11 +8,9 @@ function App() {
   
   return (
     <MuiThemeProvider theme={main}>
-      <div className="App">
-        <Menu />
-        <Follow />
-        <Landing />
-      </div>
+      <Menu />
+      <Follow />
+      <Landing />
     </MuiThemeProvider>
   );
 }

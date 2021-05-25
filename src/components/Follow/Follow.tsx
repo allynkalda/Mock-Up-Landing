@@ -1,16 +1,21 @@
 import { FunctionComponent, useState } from 'react';
-import { IconButton, Typography, Accordion, AccordionSummary, AccordionDetails } from '@material-ui/core';
+import { IconButton, Typography, Accordion, AccordionSummary, AccordionDetails, Grid } from '@material-ui/core';
 import { Chip } from 'components';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import data from '../../data/data.json';
 
 import useStyles from './Follow.styles';
 
-const Follow: FunctionComponent<any> = ({ children }) => {
+const Follow: FunctionComponent<any> = () => {
 
-  const [ expanded, setExpanded ] = useState<string | false>('panel1');
+  const theme = useTheme();
   const classes = useStyles();
+  const mobile = useMediaQuery(theme.breakpoints.down('xs'));
+
+  const [ expanded, setExpanded ] = useState<string | false>(false);
   const handleChange = (panel: string) => (event: React.ChangeEvent<{}>, newExpanded: boolean) => {
     setExpanded(newExpanded ? panel : false);
   };
@@ -29,15 +34,40 @@ const Follow: FunctionComponent<any> = ({ children }) => {
                 Following
             </Typography>
             )}
-            {!expanded && data.following.map((item: { label: string; type: string; }) => {
+            {!expanded && !mobile ? data.following.map((item: { label: string; type: string; }) => {
                 return <Chip label={item.label} type={item.type} />
-            })}
+            }): ''}
             </AccordionSummary>
-            <AccordionDetails>
-                <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                    sit amet blandit leo lobortis eget.
-                </Typography>
+            <AccordionDetails className={classes.details}>
+                <div className={classes.container}>
+                    <Typography variant="h5" className={classes.titleDetails}>
+                        Following
+                    </Typography>
+                    <Grid item xs={12} className={classes.gridItem}>
+                    {expanded && data.following.map((item: { label: string; type: string; }) => {
+                        if (item.type === 'primary') {
+                            return <Chip label={item.label} type={item.type} />
+                        }
+                    })}
+                    </Grid>
+                    <Grid item xs={12} className={classes.gridItem}>
+                    {expanded && data.following.map((item: { label: string; type: string; }) => {
+                        if (item.type === 'secondary') {
+                            return <Chip label={item.label} type={item.type} />
+                        }
+                    })}
+                    </Grid>
+                </div>
+                <div className={classes.container}>
+                    <Typography variant="h5" className={classes.titleDetails}>
+                        Curating
+                    </Typography>
+                    <Grid item xs={12} className={classes.gridItem}>
+                    {expanded && data.curating.map((item: string) => {
+                        return <Chip label={item} type="primary" />
+                    })}
+                    </Grid>
+                </div>
             </AccordionDetails>
           </Accordion>
   )
