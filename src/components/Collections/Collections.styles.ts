@@ -2,10 +2,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
     box: {
-        backgroundColor: 'beige',
-        margin: '10px',
+        backgroundColor: '#f69d79',
         padding: '16px',
-        borderRadius: '12px'
+        borderRadius: '12px',
+        margin: '10px'
     },
     text: {
         fontWeight: 'bold',
